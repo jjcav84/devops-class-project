@@ -1,4 +1,3 @@
-<h1>Student#new</h1>
 <div style="margin:50px;">
 	<h3>Create a new student profile</h3>
 	<%= form_for @student do |f|%>
@@ -11,6 +10,7 @@
 		<%= f.text_field :school, placeholder: "coding school" %><br />
 		<%= f.text_field :jobtypes, placeholder: "jobtypes" %><br />
 		<%= f.text_field :photo, placeholder: "photo" %><br />
+		<%= f.hidden_field :user_id, value: current_user.id %>
 		<%= f.submit "Create Student Profile" %>
 	<% end %>
 </div>

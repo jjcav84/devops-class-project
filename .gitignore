@@ -28,3 +28,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#ignore any osx .ds files
+.DS_Store
+*/.DS_Store
