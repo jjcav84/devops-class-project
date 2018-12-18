@@ -1,12 +1,13 @@
-<%= form_for @recruiter do |form| %>
+<p>Editing <%= @recruiter.name %>
+<%= form_for @recruiter, url: { action: "update" } do |form| %>
 	<%= form.label :name %><br>
 	<%= form.text_field :name, class: "form-control" %><br>
 	<%= form.label :email %><br>
 	<%= form.email_field :email, class: "form-control" %><br>
+  <%= form.label :location %>
+  <%= form.text_field :location, class: "form-control" %>
   <%= form.label :company %><br>
   <%= form.text_field :company, class: "form-control" %><br>
-  <%= form.label :location %><br>
-  <%= form.text_field :location, class: "form-control" %><br>
   <%= form.label :website %><br>
   <%= form.text_field :website, class: "form-control" %><br>
   <%= form.label :linkedin %><br>
@@ -14,5 +15,6 @@
   <%= form.label :bio %><br>
   <%= form.text_area :bio, class: "form-control" %><br>
 	<%= form.hidden_field :user_id, value: current_user.id %>
+	<%= form.hidden_field :id, value: @recruiter.id %>
 	<%= submit_tag "Submit Profile" %><br>
 <% end %>

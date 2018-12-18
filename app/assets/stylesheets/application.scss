@@ -1,4 +1,16 @@
+/*
+*= require_bootstrap
+*= require_self
+*/
+
 @import 'font-awesome';
 @import 'bootstrap';
 @import 'mdb';
 
+#recruiterForm {
+	margin-top: 15px;
+}
+
+.form-group {
+	margin-bottom: 0px;
+}
